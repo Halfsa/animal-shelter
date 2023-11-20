@@ -1,0 +1,14 @@
+nest project
+
+animal selter site db adopt
+TS + bs
+db collums names !!!!
+
+Database name
+db animals
+id :number:
+name :string:
+gender :bool:
+date of birth :date:
+speaces :string:
+avalable :bool:
