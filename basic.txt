@@ -1,4 +1,4 @@
-nest project
+vite project
 
 animal selter site db adopt
 TS + bs
