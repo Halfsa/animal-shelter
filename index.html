@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bish Selter - Homepage</title>
   </head>
-  <body>
-    <div class="container">
+  <body id="page" data-bs-theme="dark">
+    <div class="container-fluid" style="padding: 0;">
       <div id="navbar">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">Bish</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,36 @@
           </div>
         </nav>
       </div>
+      
+      
         <!--carosule-->
+        
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="src/img/slide1.png"  class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="src/img/slide2.jpg" height="437.6px" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        
+       
+        <!--
+        
       <div id="carouselExampleIndicators" class="carousel slide carousel-dark">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -39,10 +68,10 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./src/img/slide1.png" class="d-block w-100" alt="Mikulás">
+            <img src="./src/img/slide1.png"  class="d-block w-100" alt="Dog in weird shape">
           </div>
           <div class="carousel-item">
-            <img src="./src/img/slide2.jpg" class="d-block w-100" alt="Dog in weird shape">
+            <img src="./src/img/slide2.jpg" class="d-block w-100" alt="Mikulás">
           </div>
           </div>
         </div>
@@ -55,15 +84,26 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+        
+        -->
       <!--main part-->
-      <div class="container">
-        <div class="row">
-          <h1>Szépítsd meg egy állat életét!</h1>
-          <h2>Rengeteg örökbefogadható állat várja támogatásod!</h2>
-          <img src="./src/img/dog-cat-frame.png" alt="Dog and Cat">
+      <div class="container-fluid ">
+        <div class="row reszek">
+          <div class="container-fluid cimsorok">
+            <h1>Szépítsd meg egy állat életét!</h1>
+            <h2>Rengeteg örökbefogadható állat várja támogatásod!</h2>
+          </div>
+          <div class="container-fluid col kep">
+            <img src="./src/img/dog-cat-frame.png" width="400" alt="Dog and Cat">
+          </div>
+         <div class="container-fluid col">
           <p>A Bish Állatszigeten szeretettel látunk minden kedves érdeklődőt látogatóként, önkéntesként, örökbefogadóként és támogatóként egyaránt!</p>
           <p><b>Az Állatsziget egységei 
             keddtől vasárnapig 10 – 16 óra között látogathatók.</b></p>
+            <button class="btn reszletek-gomb">További részletek</button>
+         </div>
+         
+          
         </div>
         <div class="row">
           <img src="./src/img/dog-frame1.png" alt="Dog">
