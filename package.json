@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "typedoc": "^0.25.4",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
   },
