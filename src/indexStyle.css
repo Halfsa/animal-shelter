@@ -1,5 +1,5 @@
 #page {
-    background-color: rgb(145, 247, 213);
+   background-color: white;
 }
 
 .reszek{
@@ -9,4 +9,18 @@
     padding-top: 10px;
     padding-bottom: 20px;
 }
-.reszletek-gomb
+p {
+    font-size: 23px;
+    text-align: left;
+}
+.infogomb{
+    margin-top: 20px;
+    text-align: center;
+}
+#feherkuty{
+    color: black;
+    
+}
+#kikkutya{
+    background-color: rgb(46, 1, 46);
+}
