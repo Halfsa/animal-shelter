@@ -35,29 +35,38 @@
     <!--main part-->
     <div class="container">
       <div class="row">
-        <div class="from">
           <!--id adni!!!-->
-          <label for="">
-            Kor:
-            <input type="number"> min</input> -
-            <input type="number"> max</input>
-          </label>
-          <label for="">
-            Faj
-            <!--bs dropdown menu-->
-          </label>
-          <label for="">
-          <!--grouping-->
-          Nem:
-            <!--bs dropdown menu-->
-          </label>
+          <div class="input-group-text col-3 text-center">
+            <p class="align-self-center">Kor:</p>
+            <div class="input-group">
+              <div class="input-group-text">min</div>
+              <input type="number" class="form-control" placeholder="0">
+            </div>
+            <div class="input-group">
+              <div class="input-group-text">max</div>
+              <input type="number" class="form-control" placeholder="0">
+            </div>
+          </div>
+          <div class="col-3">
+            <select class="form-select">
+              <option selected>-- Válaszon fajt --</option>
+              <option disabled></option>
+              <option value="M">Hím</option>
+              <option value="F">Nőstény</option>
+            </select>
+          </div>
+          <div class="col-3">
+            <select class="form-select">
+              <option selected>-- Válaszon nemet --</option>
+              <option disabled></option>
+            </select>
+          </div>
           <!--search button-->
-          <button>Search</button>
-        </div>
+          <button class="bnt col-3">Search</button>
+      </div>
         <div class="row">
           <!--ide jön az eredmény-->
         </div>
-      </div>
     </div>
      <!--standard footer-->
      <footer>
