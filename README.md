@@ -14,4 +14,3 @@
   <li>avable : bool</li>
 </ul>
 <hr>
-<p>Csinálta: Szendefly Alex és Elekes Fanni</p>
