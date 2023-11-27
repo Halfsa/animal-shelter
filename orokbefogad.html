@@ -7,7 +7,7 @@
     <title>Bish Selter - Örökbefogadás</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div id="navbar">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
@@ -34,35 +34,39 @@
     </div>
     <!--main part-->
     <div class="container">
-      <div class="row">
+      <div class="container-fluid">
           <!--id adni!!!-->
-          <div class="input-group-text col-3 text-center">
-            <p class="align-self-center">Kor:</p>
-            <div class="input-group">
-              <div class="input-group-text">min</div>
-              <input type="number" class="form-control" placeholder="0">
+          <form class="row row-cols-lg-auto g-3 align-items-center" data-bs-theme="dark">
+            <p class="col-12">Kor:</p>
+            <div class="col-12">
+              <div class="input-group">
+                <div class="input-group-text">min</div>
+                <input type="number" class="form-control" placeholder="0">
+              </div>
             </div>
-            <div class="input-group">
-              <div class="input-group-text">max</div>
-              <input type="number" class="form-control" placeholder="0">
+            <div class="col-12">
+              <div class="input-group">
+                <div class="input-group-text">max</div>
+                <input type="number" class="form-control" placeholder="0">
+              </div>
             </div>
-          </div>
-          <div class="col-3">
-            <select class="form-select">
-              <option selected>-- Válaszon fajt --</option>
-              <option disabled></option>
-              <option value="M">Hím</option>
-              <option value="F">Nőstény</option>
-            </select>
-          </div>
-          <div class="col-3">
-            <select class="form-select">
-              <option selected>-- Válaszon nemet --</option>
-              <option disabled></option>
-            </select>
-          </div>
-          <!--search button-->
-          <button class="bnt col-3">Search</button>
+            <div class="col-12">
+              <select class="form-select">
+                <option selected>-- Válaszon fajt --</option>
+                <option disabled></option>
+                <option value="M">Hím</option>
+                <option value="F">Nőstény</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <select class="form-select">
+                <option selected>-- Válaszon nemet --</option>
+                <option disabled></option>
+              </select>
+            </div>
+            <!--search button-->
+            <button class="btn btn-outline-info col-12">Search</button>
+          </form>
       </div>
         <div class="row">
           <!--ide jön az eredmény-->
