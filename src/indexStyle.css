@@ -16,11 +16,20 @@ p {
 .infogomb{
     margin-top: 20px;
     text-align: center;
+    margin-bottom: 10px;
 }
 #feherkuty{
     color: black;
-    
+    padding: 5px;
+}
+#feherkuty >div> p{
+    font-size: 20px;
 }
 #kikkutya{
     background-color: rgb(46, 1, 46);
+}
+.felhivas{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
 }
