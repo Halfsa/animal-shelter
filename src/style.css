@@ -1,3 +1,6 @@
 nav{
-    background-color: rgb(35, 192, 119);
+    background-color: rgb(12, 79, 156);
+}
+a.nav-link{
+    color: rgb(217, 236, 253);
 }

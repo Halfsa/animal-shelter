@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="./src/img/icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bish Selter - Homepage</title>
+  <title>Bish Shelter - Homepage</title>
 </head>
 
 <body id="page" data-bs-theme="dark">
@@ -67,7 +67,7 @@
     <!--main part-->
     <!--Középre akarom tenni a cuccokat ha a képernyő túl nagy help 😫-->
     <div class="container-fluid ">
-      <div class="row reszek">
+      <div class="row" id="cickuty">
         <div class="container-fluid cimsorok">
           <h1>Szépítsd meg egy állat életét!</h1>
           <h2>Rengeteg örökbefogadható állat várja támogatásod!</h2>
@@ -80,7 +80,7 @@
             örökbefogadóként és támogatóként egyaránt!</p>
           <p class="felhivas">Az Állatsziget egységei
               keddtől vasárnapig 10 – 16 óra között látogathatók.</p>
-          <a href="./orokbefogad.html" class="btn btn-outline-light infogomb btn-lg">További részletek</a>
+          <a href="./orokbefogad.html" class="btn btn-outline-light infogomb btn-lg">További részletek →</a>
         </div>
       </div>
       <div class="row">
@@ -102,35 +102,59 @@
           </div>
         </div>
         
-      <div class="row">
-        <div id="kikkutya">
-          <img src="./src/img/dog-frame2.png" alt="Dog">
-          <h4>Állatsziget</h4>
-          <p>A Bish Állatsziget 20XX-ben nyitotta meg kapuit és mára az ország egyik legfontosabb állat- és
+        <div class="row" id="kikkutya">
+          <div class="container-fluid col-md-7 col-sm-12 col-lg-4 col-xl-4">
+            <img class="img-fluid" src="./src/img/dog-frame2.png" alt="Dog">
+          </div>
+          <div class="container-fluid col">
+            <h4>Állatsziget</h4>
+          <p>A Bish Állatsziget 2004-ben nyitotta meg kapuit és mára az ország egyik legfontosabb állat- és
             természetvédelmi központjává vált.</p>
           <p>A kéthektáros élményparkot a Bish Kutyaotthon Alapítvány azért hozta létre, hogy népszerűsítse hazánkban az
             állatvédelem modern, előremutató formáit.</p>
-          <p>A kutyák és cicák örökbefogadását szolgáló Állatotthon, valamint az Állatsziget egyéb szolgáltató és
+          <p class="felhivas">A kutyák és cicák örökbefogadását szolgáló Állatotthon, valamint az Állatsziget egyéb szolgáltató és
             bemutató egységei egész évben, keddtől vasárnapig ingyenesen látogathatók.</p>
+          </div> 
         </div>
-      </div>
     </div>
     <!--standard footer-->
-    <footer>
-      <h6>Elérhetőségeink</h6>
-      <p>Bish KUTYAOTTHON ALAPÍTVÁNY</p>
-      <p>10AB Óceán u. 1000.</p>
-      <p>06-1-234-5678</p>
-      <p>bishiroda@bish.hu</p>
-      <h6>NYITVATARTÁS:</h6>
-      <p>Kedd-Vasárnap: 10:00-16:00</p>
-      <p>November 45-én: 10:00-14:00</p>
-      <p>Hétfő: zárva</p>
-      <h6>SEGÍTSEN ADÓSZÁMUNK:</h6>
-      <p>18015676-1-41</p>
-      <h6>BANKSZÁMLASZÁMUNK:</h6>
-      <p>10402283-22802398-70140000</p>
-    </footer>
+
+      <div class="container-fluid">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 py-3 my-3 border-top">
+          <div class="col">
+            <h5>ELÉRHETŐSÉGEINK:</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><p>BISH KUTYAOTTHON ALAPÍTVÁNY</p></li>
+              <li class="nav-item mb-2"><p>10AB Óceán u. 1000.</p></li>
+              <li class="nav-item mb-2"><p>06-1-234-5678</p></li>
+              <li class="nav-item mb-2"><p>bishiroda@bish.hu</p></li>
+            </ul>
+          </div>
+      
+          <div class="col">
+            <h5>NYITVATARTÁS:</h5>
+            <ul class="nav flex-column">
+              <p>Kedd-Vasárnap: 10:00-16:00</p>
+              <p>November 1-én: 10:00-14:00</p>
+              <p>Hétfő: zárva</p>
+              
+            </ul>
+          </div>
+          
+          <div class="col">
+            <h5>BANKSZÁMLASZÁMUNK:</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item"><p>10402283-22802398-70140000</p></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>ADÓSZÁMUNK:</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item"><p>18015676-1-41</p></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
   </div>
   <script type="module" src="/src/main.ts"></script>
 </body>
