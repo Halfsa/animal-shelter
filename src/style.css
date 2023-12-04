@@ -36,3 +36,12 @@ a.nav-link{
     margin-left: 40px;
     margin-bottom: 30px;
 }
+footer {
+    color: gray;
+    background-color: white;
+}
+.orokbefogad{
+    background-color: rgb(43, 43, 43);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
