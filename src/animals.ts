@@ -1,8 +1,10 @@
 /**Api jövő adatokhoz egy osztály
 */
 export class Animals{
-    constructor(public id:number, public name:string, public gender:string, public species:string, public available:boolean, public dateOfBirth:Date){
-        if(id <= 0){
+    /**A jelenlegi időt kapja meg */
+    current = new Date().getFullYear()
+    constructor(public id:number, public name:string, public gender:string, public species:string, public age:number){
+        if(id <= 0 && isNaN(id)){
             /**Id ellenőrzés */
             throw new Error("Hibás ID")
         }
@@ -16,15 +18,15 @@ export class Animals{
         }
         if(!(gender == "F" || gender == "M")){
             /**gender helyest tartalmaz */
-            throw new Error("Nem megfelő nem" + id)
+             //throw new Error("Nem megfelő nem" + id)
         }
         if(species.trim() == ""){
             /**faj ellenőrzés */
             throw new Error("Nics faj" + id)
         }
-        if(dateOfBirth.valueOf() == null){
+        if(age < 2015 && age > this.current && isNaN(age)){
             /**date of bith ellenőrzés */
-            throw new Error("Nics születési idő" + id)
+            throw new Error("Nics Életkor" + id)
         }
     }
 }

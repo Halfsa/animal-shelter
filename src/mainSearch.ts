@@ -7,7 +7,7 @@ import { Animals } from './animals';
 /**Api kapott adatokat tartalmazó tömb [Animals] típússal */
 let animals:Animals [] = []
 /**Apinak a linkje */
-const apiLink = "https://retoolapi.dev/FTJzOW/Animals"
+const apiLink = "https://retoolapi.dev/iVhTKf/animals"
 
 /**Api megkapjuk az adatokat és azt [animals] tömbe tesszük*/
 function load(){
@@ -18,8 +18,9 @@ function load(){
           }
           return final.json()
         }).then(inner => {
-          for(let i = 0; i < 50; i++){
-            new Animals(parseInt(inner[i].id), inner[i].name, inner[i].gender, inner[i].species, inner[i].available, inner[i].dateOfBirth)
+          for(let i = 0; i < 30; i++){
+            let x = new Animals(parseInt(inner[i].id), inner[i].name, inner[i].gender, inner[i].species, parseInt(inner[i].year))
+            animals.push(x)
           }
     })
 }
