@@ -7,30 +7,33 @@
     <title>Bish Selter - Örökbefogadás</title>
   </head>
   <body>
-    <div class="container">
-      <div id="navbar">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Bish</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="./index.html">Homepage</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="./orokbefogad.html">Fogadj örökbe</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./kacsolat.html">Kapcsolat</a>
-                </li>
-              </ul>
+    <div class="container-fluid" style="padding: 0;">
+        <div id="navbar">
+          <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./index.html">
+                <img src="/src/img/icon.png" alt="Bish" width="40"><br>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html">Homepage</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  active" href="./orokbefogad.html">Fogadj örökbe</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./kacsolat.html">Kapcsolat</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </nav>
-      </div>
+          </nav>
+        </div>
     </div>
     <!--main part-->
     <div class="container">
@@ -60,22 +63,41 @@
       </div>
     </div>
      <!--standard footer-->
-     <footer>
-      <h6>Elérhetőségeink</h6>
-      <p>Bish KUTYAOTTHON ALAPÍTVÁNY</p>
-      <p>10AB Óceán u. 1000.</p>
-      <p>06-1-234-5678</p>
-      <p>bishiroda@bish.hu</p>
-      <h6>NYITVATARTÁS:</h6>
-      <p>Kedd-Vasárnap: 10:00-16:00</p>
-      <p>November 45-én: 10:00-14:00</p>
-      <p>Hétfő: zárva</p>
-      <h6>SEGÍTSEN ADÓSZÁMUNK:</h6>
-      <p>18015676-1-41</p>
-      <h6>BANKSZÁMLASZÁMUNK:</h6>
-      <p>10402283-22802398-70140000</p>
-      <p>A fent látható adatok a REX Kutyaotthon oldaláról lett másolva, katt <a href="http://">ide</a> az oldal megtekinésére</p>
-    </footer>
+     <div class="container-fluid">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 py-3 my-3 border-top">
+        <div class="col">
+          <h5>ELÉRHETŐSÉGEINK:</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><p>BISH KUTYAOTTHON ALAPÍTVÁNY</p></li>
+            <li class="nav-item mb-2"><p>1023 Óceán u. 78.</p></li>
+            <li class="nav-item mb-2"><p>06-1-234-5678</p></li>
+            <li class="nav-item mb-2"><p>bishiroda@bish.hu</p></li>
+          </ul>
+        </div>
+    
+        <div class="col">
+          <h5>NYITVATARTÁS:</h5>
+          <ul class="nav flex-column">
+            <p>Hétfő: zárva</p>
+            <p>Kedd-Vasárnap: 10:00-16:00</p>
+            <p>November 1-én: 10:00-14:00</p>
+          </ul>
+        </div>
+        
+        <div class="col">
+          <h5>BANKSZÁMLASZÁMUNK:</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item"><p>10402283-22802398-70140000</p></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h5>ADÓSZÁMUNK:</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item"><p>18015676-1-41</p></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
