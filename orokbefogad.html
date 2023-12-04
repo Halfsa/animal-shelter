@@ -44,31 +44,31 @@
             <div class="col-12">
               <div class="input-group">
                 <div class="input-group-text">min</div>
-                <input type="number" class="form-control" placeholder="0">
+                <input type="number" class="form-control" placeholder="0" id="min">
               </div>
             </div>
             <div class="col-12">
               <div class="input-group">
                 <div class="input-group-text">max</div>
-                <input type="number" class="form-control" placeholder="0">
+                <input type="number" class="form-control" placeholder="0" id="max">
               </div>
             </div>
             <div class="col-12">
-              <select class="form-select">
+              <select class="form-select" id="species">
                 <option selected>-- Válaszon fajt --</option>
+                <option disabled></option>
+              </select>
+            </div>
+            <div class="col-12">
+              <select class="form-select" id="gender">
+                <option selected>-- Válaszon nemet --</option>
                 <option disabled></option>
                 <option value="M">Hím</option>
                 <option value="F">Nőstény</option>
               </select>
-              </div>
-              <div class="col-12">
-                <select class="form-select">
-                  <option selected>-- Válaszon nemet --</option>
-                  <option disabled></option>
-              </select>
             </div>
             <!--search button-->
-            <button class="btn btn-outline-info col-12">Search</button>
+            <button class="btn btn-outline-info col-12" id="Search">Search</button>
           </form>
       </div>
         <div class="row">
