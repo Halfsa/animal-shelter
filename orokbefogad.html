@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bish Selter - Örökbefogadás</title>
   </head>
-  <body>
+  <body data-bs-theme="dark">
     <div class="container-fluid">
       <div id="navbar">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -54,14 +54,14 @@
               <select class="form-select">
                 <option selected>-- Válaszon fajt --</option>
                 <option disabled></option>
-                <option value="M">Hím</option>
-                <option value="F">Nőstény</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <select class="form-select">
-                <option selected>-- Válaszon nemet --</option>
-                <option disabled></option>
+              </div>
+              <div class="col-12">
+                <select class="form-select">
+                  <option selected>-- Válaszon nemet --</option>
+                  <option disabled></option>
+                  <option value="M">Hím</option>
+                  <option value="F">Nőstény</option>
+                </select>
               </select>
             </div>
             <!--search button-->
@@ -69,7 +69,16 @@
           </form>
       </div>
         <div class="row">
-          <!--ide jön az eredmény-->
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Faj</th>
+                <th scope="col">Név</th>
+                <th scope="col">Kor</th>
+                <th scope="col">Nem</th>
+              </tr>
+            </thead>
+          </table>
         </div>
     </div>
      <!--standard footer-->
@@ -89,6 +98,6 @@
       <p>10402283-22802398-70140000</p>
       <p>A fent látható adatok a REX Kutyaotthon oldaláról lett másolva, katt <a href="http://">ide</a> az oldal megtekinésére</p>
     </footer>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/mainSearch.ts"></script>
   </body>
 </html>
