@@ -2,6 +2,37 @@ nav{
     background-color:rgb(20, 20, 86);
     
 }
+#nav_img{
+    border-radius: 10px;
+}
 a.nav-link{
     color: rgb(217, 236, 253);
+}
+.page {
+    background-color: white;
+}
+.tartalom{
+    color: gray;
+    background-color: white;
+    opacity: 95%;
+    margin: auto;
+    
+}
+.kapcsolat{
+    padding: 20px;
+    background-color: rgb(225, 248, 255);
+    color: rgb(94, 94, 94);
+    margin-bottom: 20px;
+    
+}
+#kapcsolatpage{
+    background-image:url('./img/blobfish-blobby.gif');
+}
+
+.cimsorok_kapcsolat{
+    margin: 20px;
+}
+.tartalom_kapcsolat{
+    margin-left: 40px;
+    margin-bottom: 30px;
 }
