@@ -1,0 +1,51 @@
+#page {
+   background-color: white;
+}
+
+#cickuty{
+    background-color:rgb(20, 20, 86);
+    color: rgb(203, 207, 234);
+}
+#cickuty>div>p{
+    font-size: 23px;
+}
+.cimsorok{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+p {
+    font-size: 18px;
+    text-align: left;
+}
+.infogomb{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+#feherkuty{
+    color: rgb(73, 72, 72);
+    padding: 5px;
+}
+#feherkuty >div> p{
+    font-size: 22px;
+}
+#kikkutya{
+    background-color: rgb(46, 1, 46);
+    color: rgb(239, 226, 252);
+    padding: 10px;
+}
+#kikkutya >div> p{
+    font-size: 22px;
+}
+.felhivas{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+footer{
+    color: rgb(112, 112, 112);
+}
+.row{
+    align-items: center;
+}
