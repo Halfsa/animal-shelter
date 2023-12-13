@@ -1,3 +1,4 @@
+/**a main Ts amit haszálunk */
 /** A kapcsolat oldalhoz tartozó TS*/
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.css';
