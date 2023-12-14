@@ -8,9 +8,8 @@
   <li>id : number</li>
   <li>name : string</li>
   <li>speaces : string</li>
-  <li>date-of-birth : date</li>
+  <li>year : number</li>
   <li>gender : string</li>
   <p>M = male, F = female</p>
-  <li>avable : bool</li>
 </ul>
 <hr>
