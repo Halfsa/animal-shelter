@@ -14,7 +14,7 @@ a.nav-link{
 .tartalom{
     color: gray;
     background-color: white;
-    opacity: 95%;
+    opacity: 98%;
     margin: auto;
     
 }
@@ -35,4 +35,7 @@ a.nav-link{
 .tartalom_kapcsolat{
     margin-left: 40px;
     margin-bottom: 30px;
+}
+iframe{
+    padding: 20px;
 }
