@@ -23,7 +23,7 @@ function load(){
             let x = new Animals(parseInt(inner[i].id), inner[i].name, inner[i].gender, inner[i].species, parseInt(inner[i].year))
             animals.push(x)
             SelectLoad(x.species)
-            console.table(animals)
+            //console.table(animals)
           }
     })
 }
@@ -63,14 +63,12 @@ function Search(){
   /**Ha minden helyes akkor lépünk be a filter-es részbe
    * egy pár változó */
   else{
-    let yearAgeMax : number
-    let yearAgeMin : number
     let vs:Animals[] = [] 
     vs = animals
-    yearAgeMax = new Date().getFullYear() - max
-    yearAgeMin = new Date().getFullYear() - min
+    /**A éveket átírjuk napokra */
+    vs = YearToNumber(vs)
     /**Filer a felhasználó szerint */
-    let final = vs.filter(x => x.age <= yearAgeMax || x.age >= yearAgeMin && x.gender == gender && x.species == species)
+    let final = vs.filter(x => x.age <= max && x.age >= min && x.gender == gender && x.species == species)
     if(final.length == 0){
       /**Ha nincs ilyen találat */
       alert("Sajnos ilyen állat nincs a menhelyünkön")
@@ -86,10 +84,10 @@ function Search(){
         td_name.textContent = final[i].name
         td_age.textContent = (today - final[i].age).toString()
         if(final[i].gender == "M"){
-          td_gender.innerHTML = '<img class="table-img" src="./src/img/male.png">'
+          td_gender.innerHTML = '<img class="table-img" src="./src/img/male.png" style="width: 15%;height: auto;">'
         }
         else{
-          td_gender.innerHTML = '<img class="table-img" src="./src/img/female.png">'
+          td_gender.innerHTML = '<img class="table-img" src="./src/img/female.png" style="width: 15%;height: auto;">'
         }
         tr.appendChild(td_species)
         tr.appendChild(td_name)
@@ -116,6 +114,16 @@ function SelectLoad(x : string){
     option.textContent = `${x}`
     selectSpecies!.appendChild(option)
   } 
+}
+
+/**Az éveket átírja korrá */
+function YearToNumber(vs:Animals[]){
+  const year = new Date().getFullYear()
+  for (let i = 0; i < vs.length; i++) {
+    vs[i].age = (year - vs[i].age) + 1
+  }
+  console.table(vs)
+  return vs;
 }
 
 /**A Search gomb nyomásakor lefútó funcion meghívása */
