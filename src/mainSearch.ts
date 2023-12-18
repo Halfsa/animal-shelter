@@ -23,13 +23,13 @@ function load(){
             let x = new Animals(parseInt(inner[i].id), inner[i].name, inner[i].gender, inner[i].species, parseInt(inner[i].year))
             animals.push(x)
             SelectLoad(x.species)
-            //console.table(animals)
           }
     })
 }
 
 /**A felhasználó által megadott adatoknak a szűrése */
 function Search(){
+  //console.table(animals)
   /**Output kellő valtozók */
   const tbody = document.getElementById('table-animals')
   const tr = document.createElement('tr')
@@ -68,7 +68,12 @@ function Search(){
     /**A éveket átírjuk napokra */
     vs = YearToNumber(vs)
     /**Filer a felhasználó szerint */
-    let final = vs.filter(x => x.age <= max && x.age >= min && x.gender == gender && x.species == species)
+    /**Életkor filter */
+    let a = vs.filter(x => x.age <= max && x.age >= min)
+    /**Nem filter */
+    let b = a.filter(x => x.gender == gender)
+    /**Faj filter */
+    let final = b.filter(x => x.species == species)
     if(final.length == 0){
       /**Ha nincs ilyen találat */
       alert("Sajnos ilyen állat nincs a menhelyünkön")
@@ -122,7 +127,7 @@ function YearToNumber(vs:Animals[]){
   for (let i = 0; i < vs.length; i++) {
     vs[i].age = (year - vs[i].age) + 1
   }
-  console.table(vs)
+  //console.table(vs)
   return vs;
 }
 
