@@ -8,25 +8,33 @@ export class Animals{
             /**Id ellenőrzés */
             throw new Error("Hibás ID")
         }
-        if(name.trim() == ""){
+        this.id = id
+        name = name.trim()
+        this.name = name
+        if(name == ""){
             /**név ellenőrzés */
             throw new Error("Nics név" + id)
         }
-        if(gender.trim() == ""){
+        gender = gender.trim()
+        if(gender == ""){
             /**nem ellenőrzés */
             throw new Error("Nics nem" + id)
         }
         if(!(gender == "F" || gender == "M")){
             /**gender helyest tartalmaz */
-             //throw new Error("Nem megfelő nem" + id)
+            throw new Error("Nem megfelő nem" + id)
         }
-        if(species.trim() == ""){
+        this.gender = gender
+        species = species.trim()
+        if(species == ""){
             /**faj ellenőrzés */
             throw new Error("Nics faj" + id)
         }
+        this.species = species
         if(age < 2015 && age > this.current && isNaN(age)){
             /**date of bith ellenőrzés */
             throw new Error("Nics Életkor" + id)
         }
+        this.age = age
     }
 }

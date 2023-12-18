@@ -21,6 +21,7 @@ function load(){
         }).then(inner => {
           for(let i = 0; i < 30; i++){
             let x = new Animals(parseInt(inner[i].id), inner[i].name, inner[i].gender, inner[i].species, parseInt(inner[i].year))
+            x.age = YearToNumber(x.age)
             animals.push(x)
             SelectLoad(x.species)
             Tablefull(x)
@@ -30,24 +31,19 @@ function load(){
 
 /**A felhasználó által megadott adatoknak a szűrése */
 function Search(){
-  console.table(animals)
+  //console.table(animals)
   /**Output kellő valtozók */
   const tbody = document.getElementById('table-animals')
-  const tr = document.createElement('tr')
-  const td_species = document.createElement('td')
-  const td_name = document.createElement('td')
-  const td_age = document.createElement('td')
-  const td_gender = document.createElement('td')
   /**imput magkapott adatok */
   console.log(animal);
   const min = parseInt((document.getElementById('min') as HTMLInputElement).value)
-  const max = parseInt((document.getElementById('min') as HTMLInputElement).value)
+  const max = parseInt((document.getElementById('max') as HTMLInputElement).value)
   const species = (document.getElementById('species') as HTMLInputElement).value
   const gender = (document.getElementById('gender') as HTMLInputElement).value
   /**Ellenőrzés mielőtt a filtert megcsináljuk */
   /**ha a [min] nem szám vagy nagyobb mint [max]*/
   if(isNaN(min) || min > max){
-  alert("Hibás érték: Minimum")
+    alert("Hibás érték: Minimum")
   }
   /**ha a [max] nem szám vagy kissebbb mint [min]*/
   if(isNaN(max) || max < min){
@@ -67,40 +63,46 @@ function Search(){
     let vs:Animals[] = [] 
     vs = animals
     /**A éveket átírjuk napokra */
-    vs = YearToNumber(vs)
     /**Filer a felhasználó szerint */
     /**Életkor filter */
     let a = vs.filter(x => x.age <= max && x.age >= min)
+    console.table(a)
     /**Nem filter */
     let b = a.filter(x => x.gender == gender)
+    console.table(b)
     /**Faj filter */
     let final = b.filter(x => x.species == species)
+    console.table(final)
     if(final.length == 0){
       /**Ha nincs ilyen találat */
       alert("Sajnos ilyen állat nincs a menhelyünkön")
     }
     else{
       /**Kiírás table-be */
-      const today = new Date().getFullYear()
       console.table(final)
       tbody!.innerHTML = ""
-      for(let i = 0; i < final.length; i++){
+      final.forEach((a) => {
         /**for kiírás */
-        td_species.innerHTML = '<img class="table-img" src="./src/img/' + final[i].species + '.svg">'
-        td_name.textContent = final[i].name
-        td_age.textContent = (today - final[i].age).toString()
-        if(final[i].gender == "M"){
+        const td_species = document.createElement('td')
+        const td_name = document.createElement('td')
+        const td_age = document.createElement('td')
+        const td_gender = document.createElement('td')
+        td_species.innerHTML = '<img class="table-img" src="./src/img/' + a.species + '.svg">'
+        td_name.textContent = a.name
+        td_age.textContent = a.age.toString()
+        if(a.gender == "M"){
           td_gender.innerHTML = '<img class="table-img" src="./src/img/male.png" style="width: 5%;height: auto;">'
         }
         else{
           td_gender.innerHTML = '<img class="table-img" src="./src/img/female.png" style="width: 5%;height: auto;">'
         }
+        let tr = document.createElement('tr')
         tr.appendChild(td_species)
         tr.appendChild(td_name)
         tr.appendChild(td_age)
         tr.appendChild(td_gender)
         tbody!.appendChild(tr)
-      }
+      })
     }
   }
 }
@@ -123,12 +125,9 @@ function SelectLoad(x : string){
 }
 
 /**Az éveket átírja korrá */
-function YearToNumber(vs:Animals[]){
+function YearToNumber(vs:number){
   const year = new Date().getFullYear()
-  for (let i = 0; i < vs.length; i++) {
-    vs[i].age = (year - vs[i].age)
-  }
-  //console.table(vs)
+  vs = (year - vs) + 1
   return vs;
 }
 
