@@ -23,13 +23,14 @@ function load(){
             let x = new Animals(parseInt(inner[i].id), inner[i].name, inner[i].gender, inner[i].species, parseInt(inner[i].year))
             animals.push(x)
             SelectLoad(x.species)
+            Tablefull(x)
           }
     })
 }
 
 /**A felhasználó által megadott adatoknak a szűrése */
 function Search(){
-  //console.table(animals)
+  console.table(animals)
   /**Output kellő valtozók */
   const tbody = document.getElementById('table-animals')
   const tr = document.createElement('tr')
@@ -89,10 +90,10 @@ function Search(){
         td_name.textContent = final[i].name
         td_age.textContent = (today - final[i].age).toString()
         if(final[i].gender == "M"){
-          td_gender.innerHTML = '<img class="table-img" src="./src/img/male.png" style="width: 15%;height: auto;">'
+          td_gender.innerHTML = '<img class="table-img" src="./src/img/male.png" style="width: 5%;height: auto;">'
         }
         else{
-          td_gender.innerHTML = '<img class="table-img" src="./src/img/female.png" style="width: 15%;height: auto;">'
+          td_gender.innerHTML = '<img class="table-img" src="./src/img/female.png" style="width: 5%;height: auto;">'
         }
         tr.appendChild(td_species)
         tr.appendChild(td_name)
@@ -125,10 +126,36 @@ function SelectLoad(x : string){
 function YearToNumber(vs:Animals[]){
   const year = new Date().getFullYear()
   for (let i = 0; i < vs.length; i++) {
-    vs[i].age = (year - vs[i].age) + 1
+    vs[i].age = (year - vs[i].age)
   }
   //console.table(vs)
   return vs;
+}
+
+function Tablefull(x : Animals){
+  /**Output kellő valtozók */
+  const tbody = document.getElementById('table-animals')
+  const tr = document.createElement('tr')
+  const td_species = document.createElement('td')
+  const td_name = document.createElement('td')
+  const td_age = document.createElement('td')
+  const td_gender = document.createElement('td')
+  const today = new Date().getFullYear()
+  /**for kiírás */
+  td_species.innerHTML = '<img class="table-img" src="./src/img/' + x.species + '.svg">'
+  td_name.textContent = x.name
+  td_age.textContent = (today - x.age).toString()
+  if(x.gender == "M"){
+    td_gender.innerHTML = '<img class="table-img" src="./src/img/male.png" style="width: 5%;height: auto;">'
+  }
+  else{
+    td_gender.innerHTML = '<img class="table-img" src="./src/img/female.png" style="width: 5%;height: auto;">'
+  }
+  tr.appendChild(td_species)
+  tr.appendChild(td_name)
+  tr.appendChild(td_age)
+  tr.appendChild(td_gender)
+  tbody!.appendChild(tr)
 }
 
 /**A Search gomb nyomásakor lefútó funcion meghívása */
