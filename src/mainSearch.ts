@@ -139,11 +139,10 @@ function Tablefull(x : Animals){
   const td_name = document.createElement('td')
   const td_age = document.createElement('td')
   const td_gender = document.createElement('td')
-  const today = new Date().getFullYear()
   /**for kiírás */
   td_species.innerHTML = '<img class="table-img" src="./src/img/' + x.species + '.svg">'
   td_name.textContent = x.name
-  td_age.textContent = (today - x.age).toString()
+  td_age.textContent = x.age.toString()
   if(x.gender == "M"){
     td_gender.innerHTML = '<img class="table-img" src="./src/img/male.png" style="width: 5%;height: auto;">'
   }
